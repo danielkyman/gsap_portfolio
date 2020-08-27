@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
+
+$red: #e20001;
+$black: #191919;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 1280px;
+  min-width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  .wrapper {
+    // padding: 0 48px;
+    height: 90%;
+    .home {
+      border: 1px solid red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 90%;
+      width: 100%;
+      .item-home {
+        width: 25%;
+        padding: 0 10px;
+        h2 {
+          // margin-top: 260px;
+          font-size: 24px;
+          font-weight: 600;
+          // padding-right: 360px;
+        }
+      }
+    }
+  }
+}
+
+header {
+  height: 100px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .logo a {
+    text-decoration: none;
+    color: $black;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
