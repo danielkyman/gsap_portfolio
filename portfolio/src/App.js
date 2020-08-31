@@ -9,6 +9,8 @@ import Stack from "./components/Stack";
 
 import Projects from "./components/Projects";
 
+import Contact from "./components/Contact";
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -31,18 +33,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-// function Projects() {
-//   return <p>Discover our numerous opportunities</p>;
-// }
-
-// function Stack() {
-//   return <p>Solutions that help you.</p>;
-// }
-
-function Contact() {
-  return <p>Feel free to reach out.</p>;
 }
 
 export default App;

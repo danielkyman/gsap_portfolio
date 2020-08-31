@@ -113,7 +113,7 @@ function Home() {
 
             <h5 ref={(e) => (homeItemTwo = e)}>Disciplined</h5>
             <p ref={(e) => (homeItemPTwo = e)}>
-              Thriving in a fast-paced multi-tasked environment
+              Thriving in fast-paced multi-tasked environments
             </p>
           </div>
           <div className="home-item">
@@ -124,7 +124,7 @@ function Home() {
             <h5 ref={(e) => (homeItemThree = e)}>Passionate</h5>
             <p ref={(e) => (homeItemPThree = e)}>
               Independently furthering knowledge with minimal direction and
-              guidance.
+              guidance
             </p>
           </div>
           <div className="home-item">
@@ -134,7 +134,7 @@ function Home() {
 
             <h5 ref={(e) => (homeItemFour = e)}>Loyal</h5>
             <p ref={(e) => (homeItemPFour = e)}>
-              Encouraging team members to grow and enhancing overall moral.
+              Encouraging team members to grow while enhancing overall moral
             </p>
           </div>
         </div>

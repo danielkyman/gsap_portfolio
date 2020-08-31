@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Menu from "./Menu";
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = ({ history }) => {
@@ -79,6 +78,12 @@ const Header = ({ history }) => {
             </div>
             <a className="git-icon" href="https://github.com/danielkyman">
               <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+            <a
+              className="git-icon"
+              href="https://www.linkedin.com/in/daniel-kyman-6816b3b2/"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
             <div className="menu">
               {state.clicked ? (
