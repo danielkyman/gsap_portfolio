@@ -3,6 +3,10 @@
 $red: #e20001;
 $black: #191919;
 
+$breakpoint-desktop: 1280px;
+$breakpoint-tablet: 960px;
+$breakpoint-mobile: 600px;
+
 html,
 body {
   padding: 0;
@@ -16,9 +20,14 @@ body {
   min-width: 1280px;
   height: 90vh;
   margin: 0 auto;
+  @media (max-width: $breakpoint-tablet) {
+    width: 960px;
+    min-width: 960px;
+  }
   .wrapper {
     padding: 0 48px;
     height: 70%;
+
     .home {
       // border: 1px solid red;
       display: flex;
@@ -33,6 +42,9 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
+          @media (max-width: $breakpoint-tablet) {
+            height: 65%;
+          }
         }
       }
       p {
@@ -53,11 +65,11 @@ body {
           padding: 10px;
 
           h5 {
-            // margin-top: 260px;
             font-size: 24px;
             font-weight: 600;
-            // margin-bottom: 10px;
-            // padding-right: 360px;
+            // @media (max-width: $breakpoint-mobile){
+            //   color: $red;
+            // }
           }
         }
       }
@@ -161,6 +173,9 @@ header {
         mix-blend-mode: difference;
         color: white;
         font-weight: 700;
+        &:hover {
+          color: $red;
+        }
       }
       .button-black {
         border: none;
@@ -171,6 +186,9 @@ header {
         mix-blend-mode: difference;
         color: $black;
         font-weight: 700;
+        &:hover {
+          color: $red;
+        }
       }
       // button {
       //   border: none;

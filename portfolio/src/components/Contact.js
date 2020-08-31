@@ -1,14 +1,61 @@
 import React from "react";
 
+import { useForm } from "react-hook-form";
+
+import axios from "axios";
+
 const Contact = () => {
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+    alert(
+      `Thank you ${data.name} for reaching out. I will do my best to get back to you as soon as possible!`
+    );
+  };
+
   return (
     <div className="contact">
       <div className="contact-content">
         <h5>Feel free to reach out.</h5>
         <div className="contact-form">
-          <h6>Name:</h6>
+          {/* <h6>Name:</h6>
           <h6>Email:</h6>
-          <h6>Message:</h6>
+          <h6>Message:</h6> */}
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="name-input">
+              <label htmlFor="name">Name</label>
+              <br />
+              <input
+                type="text"
+                name="name"
+                ref={register({ required: true })}
+              />
+              <br />
+              {errors.name && <span>Name is required</span>}
+              <br />
+            </div>
+            <div className="email-input">
+              <label htmlFor="email">Email</label>
+              <br />
+              <input
+                type="text"
+                name="email"
+                ref={register({ required: true })}
+              />
+              <br />
+              {errors.email && <span>Email is required</span>}
+              <br />
+            </div>
+            <div className="message-input">
+              <label htmlFor="message">Message</label>
+              <br />
+              <textarea name="message" ref={register({ required: true })} />
+              <br />
+              {errors.message && <span>Message is required</span>}
+              <br />
+            </div>
+            <input type="submit" />
+          </form>
         </div>
         <div className="references">
           <h5>References</h5>
