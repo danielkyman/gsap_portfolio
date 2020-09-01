@@ -5,9 +5,10 @@ import { gsap } from "gsap";
 import { staggerText } from "./Animations";
 
 //icons
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { faMicrochip } from "@fortawesome/free-solid-svg-icons";
-import { faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+import { faTools } from "@fortawesome/free-solid-svg-icons";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { faFire } from "@fortawesome/free-solid-svg-icons";
+import { faHandshake } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -98,7 +99,7 @@ function Home() {
             ref={(e) => (homeGroupOne = e)}
           >
             <div className="home-icon" ref={(e) => (iconOne = e)}>
-              <FontAwesomeIcon icon={faHome} size="3x" />
+              <FontAwesomeIcon icon={faTools} size="3x" />
             </div>
 
             <h5 ref={(e) => (homeItemOne = e)}>Effective</h5>
@@ -108,7 +109,7 @@ function Home() {
           </div>
           <div className="home-item">
             <div className="home-icon" ref={(e) => (iconTwo = e)}>
-              <FontAwesomeIcon icon={faMicrochip} size="3x" />
+              <FontAwesomeIcon icon={faBook} size="3x" />
             </div>
 
             <h5 ref={(e) => (homeItemTwo = e)}>Disciplined</h5>
@@ -118,7 +119,7 @@ function Home() {
           </div>
           <div className="home-item">
             <div className="home-icon" ref={(e) => (iconThree = e)}>
-              <FontAwesomeIcon icon={faMoneyBill} size="3x" />
+              <FontAwesomeIcon icon={faFire} size="3x" />
             </div>
 
             <h5 ref={(e) => (homeItemThree = e)}>Passionate</h5>
@@ -129,7 +130,7 @@ function Home() {
           </div>
           <div className="home-item">
             <div className="home-icon" ref={(e) => (iconFour = e)}>
-              <FontAwesomeIcon icon={faPhone} size="3x" />
+              <FontAwesomeIcon icon={faHandshake} size="3x" />
             </div>
 
             <h5 ref={(e) => (homeItemFour = e)}>Loyal</h5>

@@ -76,12 +76,19 @@ const Header = ({ history }) => {
               )}
               {/* <Link to="/">Daniel Kyman</Link> */}
             </div>
-            <a className="git-icon" href="https://github.com/danielkyman">
+            <a
+              className="git-icon"
+              href="https://github.com/danielkyman"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
             <a
               className="git-icon"
               href="https://www.linkedin.com/in/daniel-kyman-6816b3b2/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>

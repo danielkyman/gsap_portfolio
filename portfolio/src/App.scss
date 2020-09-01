@@ -82,7 +82,8 @@ body {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 90%;
+            width: 80%;
+            text-align: center;
           }
           h5 {
             font-size: 24px;
@@ -152,14 +153,64 @@ body {
       }
       .contact {
         .contact-content {
-          .references {
-            span {
-              font-style: italic;
+          .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .contact-form {
+              width: 60%;
               @media (max-width: $breakpoint-mobile) {
-                font-size: 0.7rem;
+                width: 90%;
+              }
+              form {
+                .name-input input {
+                  width: 60%;
+                  @media (max-width: $breakpoint-mobile) {
+                    width: 100%;
+                  }
+                }
+                .email-input input {
+                  width: 60%;
+                  @media (max-width: $breakpoint-mobile) {
+                    width: 100%;
+                  }
+                }
+                .message-input textarea {
+                  width: 60%;
+                  @media (max-width: $breakpoint-mobile) {
+                    width: 100%;
+                  }
+                }
+                span {
+                  @media (max-width: $breakpoint-mobile) {
+                    font-size: 0.5rem;
+                    color: $red;
+                  }
+                }
+              }
+            }
+            .contact-img {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                width: 40%;
+                @media (max-width: $breakpoint-mobile) {
+                  width: 60%;
+                }
+              }
+            }
+          }
+          .references {
+            .reference-name {
+              font-style: italic;
+              font-weight: 600;
+              @media (max-width: $breakpoint-mobile) {
+                font-size: 0.6rem;
               }
             }
             p {
+              text-transform: none;
               @media (max-width: $breakpoint-mobile) {
                 font-size: 0.6rem;
               }
@@ -173,9 +224,7 @@ body {
 
 header {
   height: 100px;
-  .container {
-    // border-bottom: 1px solid $red;
-  }
+
   .inner-header {
     position: relative;
     z-index: 10;

@@ -100,3 +100,40 @@ export const handleCityReturn = (target) => {
     skewY: 0,
   });
 };
+
+//CURRENTLY BEING USED
+
+export const fadeIn = (node) => {
+  gsap.from(node, {
+    duration: 3,
+    delay: 0,
+    opacity: 0,
+    ease: "power1.inOut",
+  });
+};
+
+export const classFadeUp = (node) => {
+  gsap.from(node, {
+    duration: 1,
+    y: 200,
+    delay: 0.5,
+    opacity: 0,
+    ease: "circ.out",
+    stagger: {
+      amount: 0.3,
+    },
+  });
+};
+
+export const classFadeDown = (node) => {
+  gsap.from(node, {
+    duration: 1,
+    y: -200,
+    delay: 0.5,
+    opacity: 0,
+    ease: "circ.out",
+    stagger: {
+      amount: 0.3,
+    },
+  });
+};

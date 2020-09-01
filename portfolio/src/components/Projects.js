@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 
-import contributions from "../images/contributions.png";
+import contributions from "../img/contributions.png";
+import { fadeIn } from "./Animations";
 
 const Projects = () => {
   let contributionMap = useRef(null);
@@ -10,15 +11,6 @@ const Projects = () => {
   let projectTwo = useRef(null);
   let projectThree = useRef(null);
   let projectFour = useRef(null);
-
-  const fadeIn = (node) => {
-    gsap.from(node, {
-      duration: 3,
-      delay: 0,
-      opacity: 0,
-      ease: "power1.inOut",
-    });
-  };
 
   const handleHoverOn = (node) => {
     gsap.to(node, {
@@ -44,7 +36,12 @@ const Projects = () => {
     <div className="projects">
       <div className="projects-content">
         <h5>Recent Contributions</h5>
-        <a className="contribution-map" href="https://github.com/danielkyman">
+        <a
+          className="contribution-map"
+          href="https://github.com/danielkyman"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             ref={(e) => {
               contributionMap = e;
