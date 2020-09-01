@@ -70,37 +70,6 @@ export const handleHoverExit = (e) => {
   });
 };
 
-// adds city image once you hover on
-export const handleCity = (city, target) => {
-  gsap.to(target, {
-    duration: 0,
-    background: `url(${city}) center center`,
-  });
-  gsap.to(target, {
-    duration: 0.4,
-    opacity: 1,
-    ease: "power3.inOut",
-  });
-  gsap.from(target, {
-    duration: 0.4,
-    skewY: 2,
-    transformOrigin: "right top",
-  });
-};
-
-// Removes the city image once you hover off
-export const handleCityReturn = (target) => {
-  gsap.to(target, {
-    duration: 0,
-    skewY: 0,
-  });
-  gsap.to(target, {
-    duration: 0.4,
-    opacity: 0,
-    skewY: 0,
-  });
-};
-
 //CURRENTLY BEING USED
 
 export const fadeIn = (node) => {
@@ -134,6 +103,45 @@ export const classFadeDown = (node) => {
     ease: "circ.out",
     stagger: {
       amount: 0.3,
+    },
+  });
+};
+
+export const nodeFadeUp = (node1, node2, node3, node4) => {
+  gsap.from([node1, node2, node3, node4], {
+    duration: 1,
+    y: 200,
+    delay: 0.5,
+    opacity: 0,
+    ease: "circ.out",
+    stagger: {
+      amount: 0.3,
+    },
+  });
+};
+
+export const nodeFadeDown = (node1, node2, node3, node4) => {
+  gsap.from([node1, node2, node3, node4], {
+    duration: 1,
+    y: -200,
+    delay: 0.5,
+    opacity: 0,
+    ease: "circ.out",
+    stagger: {
+      amount: 0.3,
+    },
+  });
+};
+
+export const staggerIcons = (node1, node2, node3, node4) => {
+  gsap.from([node1, node2, node3, node4], {
+    duration: 1,
+    x: 100,
+    delay: 1.5,
+    opacity: 0,
+    ease: "circ.out",
+    stagger: {
+      amount: 1,
     },
   });
 };

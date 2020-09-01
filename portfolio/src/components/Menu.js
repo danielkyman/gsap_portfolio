@@ -8,8 +8,6 @@ import {
   fadeInUp,
   handleHover,
   handleHoverExit,
-  handleCityReturn,
-  handleCity,
   staggerRevealClose,
 } from "./Animations";
 
@@ -18,7 +16,6 @@ const Menu = ({ state }) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
-  let cityBackground = useRef(null);
   let line1 = useRef(null);
   let line2 = useRef(null);
   let line3 = useRef(null);
@@ -57,10 +54,6 @@ const Menu = ({ state }) => {
         className="menu-secondary-background-color"
       ></div>
       <div ref={(el) => (reveal2 = el)} className="menu-layer">
-        <div
-          ref={(el) => (cityBackground = el)}
-          className="menu-city-background"
-        ></div>
         <div className="container">
           <div className="wrapper">
             <div className="menu-links">

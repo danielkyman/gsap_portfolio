@@ -27,7 +27,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="contact-content">
-        <h5>Feel free to reach out.</h5>
+        <h5>Feel free to reach out</h5>
         <div className="contact-container">
           <div className="contact-form">
             <form onSubmit={handleSubmit(onSubmit)}>

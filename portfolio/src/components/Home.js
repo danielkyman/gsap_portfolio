@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { gsap } from "gsap";
 
-import { staggerText } from "./Animations";
+import { nodeFadeUp, nodeFadeDown, staggerIcons } from "./Animations";
 
 //icons
 import { faTools } from "@fortawesome/free-solid-svg-icons";
@@ -27,64 +27,25 @@ function Home() {
   let iconThree = useRef(null);
   let iconFour = useRef(null);
 
-  const handleEffectOn = (e) => {
-    gsap.to(e, {
-      duration: 0.5,
-      y: -5,
-      ease: "power1.inOut",
-    });
-  };
+  // const handleEffectOn = (e) => {
+  //   gsap.to(e, {
+  //     duration: 0.5,
+  //     y: -5,
+  //     ease: "power1.inOut",
+  //   });
+  // };
 
-  const handleEffectOff = (e) => {
-    gsap.to(e, {
-      duration: 0.5,
-      y: 5,
-      ease: "power1.inOut",
-    });
-  };
-
-  const testFadeUp = (node1, node2, node3, node4) => {
-    gsap.from([node1, node2, node3, node4], {
-      duration: 1,
-      y: 200,
-      delay: 0.5,
-      opacity: 0,
-      ease: "circ.out",
-      stagger: {
-        amount: 0.3,
-      },
-    });
-  };
-
-  const testFadeDown = (node1, node2, node3, node4) => {
-    gsap.from([node1, node2, node3, node4], {
-      duration: 1,
-      y: -200,
-      delay: 0.5,
-      opacity: 0,
-      ease: "circ.out",
-      stagger: {
-        amount: 0.3,
-      },
-    });
-  };
-
-  const staggerIcons = (node1, node2, node3, node4) => {
-    gsap.from([node1, node2, node3, node4], {
-      duration: 1,
-      x: 100,
-      delay: 1.5,
-      opacity: 0,
-      ease: "circ.out",
-      stagger: {
-        amount: 1,
-      },
-    });
-  };
+  // const handleEffectOff = (e) => {
+  //   gsap.to(e, {
+  //     duration: 0.5,
+  //     y: 5,
+  //     ease: "power1.inOut",
+  //   });
+  // };
 
   useEffect(() => {
-    testFadeUp(homeItemOne, homeItemTwo, homeItemThree, homeItemFour);
-    testFadeDown(homeItemPOne, homeItemPTwo, homeItemPThree, homeItemPFour);
+    nodeFadeUp(homeItemOne, homeItemTwo, homeItemThree, homeItemFour);
+    nodeFadeDown(homeItemPOne, homeItemPTwo, homeItemPThree, homeItemPFour);
     staggerIcons(iconOne, iconTwo, iconThree, iconFour);
   });
 
