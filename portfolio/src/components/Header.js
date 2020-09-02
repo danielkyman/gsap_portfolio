@@ -60,19 +60,15 @@ const Header = ({ history }) => {
           <div className="inner-header">
             <div className="logo-container">
               {state.clicked ? (
-                <div className="logo-red">
-                  <Link className="name-red" to="/">
-                    Daniel Kyman
-                  </Link>
-                  <Link to="/">Software Engineer</Link>
-                </div>
+                <Link to="/" className="logo-red">
+                  <h5 className="name-red">Daniel Kyman</h5>
+                  <h5 className="title-red">Software Engineer</h5>
+                </Link>
               ) : (
-                <div className="logo-black">
-                  <Link className="name-black" to="/">
-                    Daniel Kyman
-                  </Link>
-                  <Link to="/">Software Engineer</Link>
-                </div>
+                <Link to="/" className="logo-black">
+                  <h5 className="name-black">Daniel Kyman</h5>
+                  <h5 className="title-black">Software Engineer</h5>
+                </Link>
               )}
               {/* <Link to="/">Daniel Kyman</Link> */}
             </div>

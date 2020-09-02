@@ -53,6 +53,9 @@ body {
           @media (max-width: $breakpoint-tablet) {
             height: 65%;
           }
+          @media (max-width: $breakpoint-mobile) {
+            height: 50%;
+          }
         }
       }
       p {
@@ -233,32 +236,44 @@ header {
     justify-content: space-between;
     align-items: center;
     .logo-container {
+      a {
+        text-decoration: none;
+      }
       .logo-black {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        a {
+        h5 {
           font-weight: 700;
           font-size: 1rem;
-          text-decoration: none;
           color: $black;
         }
         .name-black {
           border-bottom: 2px solid $red;
+          margin: 0;
+          text-decoration: none;
+        }
+        .title-black {
+          margin: 0;
         }
       }
+
       .logo-red {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        a {
+        h5 {
           font-weight: 700;
           font-size: 1rem;
-          text-decoration: none;
           color: $red;
         }
         .name-red {
           border-bottom: 2px solid white;
+          margin: 0;
+          text-decoration: none;
+        }
+        .title-red {
+          margin: 0;
         }
       }
     }
