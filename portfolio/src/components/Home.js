@@ -65,7 +65,7 @@ function Home() {
 
             <h5 ref={(e) => (homeItemOne = e)}>Effective</h5>
             <p ref={(e) => (homeItemPOne = e)}>
-              Solving complex problems with simple solutions
+              Solve complex problems with simple solutions
             </p>
           </div>
           <div className="home-item">
@@ -75,7 +75,7 @@ function Home() {
 
             <h5 ref={(e) => (homeItemTwo = e)}>Disciplined</h5>
             <p ref={(e) => (homeItemPTwo = e)}>
-              Thriving in fast-paced multi-tasked environments
+              Thrive in fast-paced multi-tasked environments
             </p>
           </div>
           <div className="home-item">
