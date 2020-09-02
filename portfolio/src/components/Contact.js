@@ -17,11 +17,27 @@ const Contact = () => {
   });
 
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     console.log(data);
-    alert(
-      `Thank you ${data.name} for reaching out. I will do my best to get back to you as soon as possible!`
-    );
+    e.target.reset();
+    axios
+      .post("https://portfolio-mailer-backend.herokuapp.com/api/mailer/", {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      })
+      .then((res) => {
+        alert(
+          `Thank you ${data.name} for reaching out. I will do my best to get back to you as soon as possible!`
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    // console.log(data);
+    // alert(
+    //   `Thank you ${data.name} for reaching out. I will do my best to get back to you as soon as possible!`
+    // );
   };
 
   return (
