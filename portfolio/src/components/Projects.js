@@ -12,21 +12,21 @@ const Projects = () => {
   let projectThree = useRef(null);
   let projectFour = useRef(null);
 
-  const handleHoverOn = (node) => {
-    gsap.to(node, {
-      duration: 0.3,
-      x: -5,
-      ease: "power1.inOut",
-    });
-  };
+  // const handleHoverOn = (node) => {
+  //   gsap.to(node, {
+  //     duration: 0.3,
+  //     x: -5,
+  //     ease: "power1.inOut",
+  //   });
+  // };
 
-  const handleHoverOff = (node) => {
-    gsap.to(node, {
-      duration: 0.3,
-      x: 5,
-      ease: "power1.inOut",
-    });
-  };
+  // const handleHoverOff = (node) => {
+  //   gsap.to(node, {
+  //     duration: 0.3,
+  //     x: 5,
+  //     ease: "power1.inOut",
+  //   });
+  // };
 
   useEffect(() => {
     fadeIn(contributionMap);
@@ -56,10 +56,13 @@ const Projects = () => {
             ref={(e) => {
               projectOne = e;
             }}
-            onMouseEnter={(e) => handleHoverOn(projectOne)}
-            onMouseLeave={(e) => handleHoverOff(projectOne)}
+            // onMouseEnter={(e) => handleHoverOn(projectOne)}
+            // onMouseLeave={(e) => handleHoverOff(projectOne)}
           >
+          <a href="https://github.com/danielkyman/key-conservation-mobile" target="_blank"
+          rel="noopener noreferrer" >
             <h5>Key Conservation</h5>
+            </a>
             <ul>
               <li>
                 Collaborated with a team of 5 full stack software developers
@@ -83,10 +86,13 @@ const Projects = () => {
             ref={(e) => {
               projectTwo = e;
             }}
-            onMouseEnter={(e) => handleHoverOn(projectTwo)}
-            onMouseLeave={(e) => handleHoverOff(projectTwo)}
+            // onMouseEnter={(e) => handleHoverOn(projectTwo)}
+            // onMouseLeave={(e) => handleHoverOff(projectTwo)}
           >
+          <a href="https://github.com/danielkyman/react-portfolio" target="_blank"
+          rel="noopener noreferrer" >
             <h5>React Blog / Portfolio</h5>
+            </a>
             <ul>
               <li>
                 Individually constructed a blog in the form of a single-page web
@@ -110,10 +116,13 @@ const Projects = () => {
             ref={(e) => {
               projectThree = e;
             }}
-            onMouseEnter={(e) => handleHoverOn(projectThree)}
-            onMouseLeave={(e) => handleHoverOff(projectThree)}
+            // onMouseEnter={(e) => handleHoverOn(projectThree)}
+            // onMouseLeave={(e) => handleHoverOff(projectThree)}
           >
+          <a href="https://github.com/danielkyman/conways-game-of-life" target="_blank"
+          rel="noopener noreferrer" >
             <h5>Conways Game Of Life</h5>
+            </a>
             <ul>
               <li>
                 Recreated a React application based off the cellular automata
@@ -137,10 +146,13 @@ const Projects = () => {
             ref={(e) => {
               projectFour = e;
             }}
-            onMouseEnter={(e) => handleHoverOn(projectFour)}
-            onMouseLeave={(e) => handleHoverOff(projectFour)}
+            // onMouseEnter={(e) => handleHoverOn(projectFour)}
+            // onMouseLeave={(e) => handleHoverOff(projectFour)}
           >
+          <a href="https://github.com/danielkyman/8Bit_CPU_Emulator" target="_blank"
+          rel="noopener noreferrer" >
             <h5>Python 8-Bit CPU Emulator</h5>
+            </a>
             <ul>
               <li>
                 Developed an 8-bit memory address CPU emulator with 256 bytes of
